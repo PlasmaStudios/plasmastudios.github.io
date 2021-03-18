@@ -2,8 +2,8 @@
 
 :root {
     --white: #eeeeee;
-    --teal: #12e7ee;
-    --dark-teal: #155052;
+    --teal: #00f7ff;
+    --dark-teal: #5acbcf;
     --light-grey: #686d76;
     --dark-grey: #373a40;
 }
@@ -17,6 +17,7 @@ h1 {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     padding-top: 10%;
+    cursor: default;
 }
 h2 {
     color: var(--teal);
@@ -29,16 +30,26 @@ h2 {
     animation-delay: 0.25s;
     animation-fill-mode: forwards;
     margin-bottom: 58vh;
+    cursor: default;
 }
 h3 {
     color: var(--white);
     font-family: 'Prompt', sans-serif;
     font-size: 2.5vw;
+    cursor: default;
 }
 p {
     color: var(--white);
     font-family: 'Prompt', sans-serif;
     font-size: 1vw;
+    cursor: default;
+}
+a {
+    color: var(--white);
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.5vw;
+    cursor: pointer;
+    text-decoration: none;
 }
 body {
     background-color: var(--dark-grey);
@@ -74,13 +85,14 @@ hr {
 .button {
     width:25%;
     height:10%;
-    background-color: var(--light-grey);
+    background-color: var(--dark-teal);
     color: var(--white);
     font-family: 'Prompt', sans-serif;
     font-size: 2vw;
     border-radius: 10px;
     padding: 1vh 1vw 1vh 1vw;
     line-height: 25vh;
+    cursor: pointer;
 }
 footer {
     width: 100%;
@@ -88,6 +100,23 @@ footer {
 }
 .side-images {
     width:20vw;
+    cursor: default;
+}
+header {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 7vh;
+    background-color: var(--dark-grey);
+    animation-name: scale-in-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+    padding-top: 1vh;
 }
 #particles-js {
     position: absolute;
@@ -97,14 +126,18 @@ footer {
     z-index: -1;
     position:fixed;
 }
+.out {
+    display: block;
+}
 @media screen and (max-width:  600px) {
     .side-images{display: none}
-    .left-section{display: block; height: 32vh}
+    .left-section{display: block; height: 38vh}
     .button {border: 1vw; line-height: 5vh; font-size: 4vw; padding: 1vh 2vw 1vh 2vw}
     h1 {font-size: 20vw}
     h2 {font-size: 12vw; margin-bottom: 10vh;}
     h3 {font-size: 7vw}
     p {font-size: 3vw}
+    .out {display: none}
 }
 
 @keyframes fade-in-top {
@@ -113,5 +146,9 @@ footer {
 }
 @keyframes width-scale-in {
     0% {opacity: 0; width: 0}
+    100% {opacity: 1}
+}
+@keyframes scale-in-top {
+    0% {opacity: 0; height: 0}
     100% {opacity: 1}
 }
