@@ -71,16 +71,16 @@ hr {
 }
 .left-section {
     width: 50vw;
-    height: 50vh;
     /* background-color: #eeeeee2c; */
     margin: auto;
-    margin-top: 5vh;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
     ". .";
+    padding: 1vh;
 }
 .button {
     width:25%;
@@ -101,6 +101,8 @@ footer {
 .side-images {
     width:20vw;
     cursor: default;
+    vertical-align: middle;
+    margin-top: 12%;
 }
 header {
     top: 0;
@@ -126,18 +128,14 @@ header {
     z-index: -1;
     position:fixed;
 }
-.out {
-    display: block;
-}
 @media screen and (max-width:  600px) {
     .side-images{display: none}
-    .left-section{display: block; height: 38vh}
+    .left-section{display: block;}
     .button {border: 1vw; line-height: 5vh; font-size: 4vw; padding: 1vh 2vw 1vh 2vw}
     h1 {font-size: 20vw}
     h2 {font-size: 12vw; margin-bottom: 10vh;}
     h3 {font-size: 7vw}
     p {font-size: 3vw}
-    .out {display: none}
 }
 
 @keyframes fade-in-top {
